@@ -1,0 +1,29 @@
+/* On importe la police DM Sans depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* Les 3 lignes magiques de Tailwind — ne jamais les supprimer */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset global : toute l'app utilise DM Sans */
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Le fond de toute l'application sera beige AMANDE */
+body {
+  background-color: #EADED0;
+}
+
+/* Scrollbar discrète pour ne pas casser le design */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #EADED0;
+}
+::-webkit-scrollbar-thumb {
+  background: #C7AF94;
+  border-radius: 4px;
+}
