@@ -1,16 +1,59 @@
-# React + Vite
+# Biblioth-que_num-rique
+Application web de gestion de bibliothèque — React, Tailwind CSS &amp; Supabase. Gestion des membres, emprunts, retours et pénalités avec 3 espaces distincts : Membre, Bibliothécaire et Administrateur.
+# 📚 ARCHIVE — Système de Gestion de Bibliothèque
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Application web complète pour gérer une bibliothèque moderne.
 
-Currently, two official plugins are available:
+## 🚀 Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 👤 Espace Membre
+- Inscription et connexion sécurisée
+- Consultation du catalogue de livres
+- Emprunt de livres (max 3 simultanément)
+- Suivi des emprunts en cours et historique
+- Consultation des pénalités
+- Notifications d'échéance
+- Avis sur la bibliothèque
 
-## React Compiler
+### 📚 Espace Bibliothécaire
+- Suivi des emprunts en cours
+- Enregistrement des retours
+- Calcul automatique des pénalités
+- Encaissement des pénalités
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔑 Espace Administrateur
+- Dashboard avec KPIs en temps réel
+- Gestion du catalogue (ajout, modification)
+- Gestion des membres
+- Supervision des pénalités
+- Statistiques globales
 
-## Expanding the ESLint configuration
+## ⚙️ Règles métier
+- Maximum 3 emprunts simultanés par membre
+- Pénalité automatique : 100 FCFA / jour de retard
+- Blocage automatique si pénalité non réglée
+- Déblocage automatique après paiement
+- Date de retour : J+14 automatique
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Stack technique
+- **Frontend** : React + Vite + Tailwind CSS
+- **Backend** : Supabase (PostgreSQL + Auth)
+- **Déploiement** : Vercel
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/TON_USERNAME/archive-bibliotheque.git
+cd archive-bibliotheque
+npm install
+npm run dev
+```
+
+## 🔐 Variables d'environnement
+
+Crée un fichier `.env` à la racine :
+
+```
+VITE_SUPABASE_URL=ta_url_supabase
+VITE_SUPABASE_ANON_KEY=ta_clé_supabase
+```
